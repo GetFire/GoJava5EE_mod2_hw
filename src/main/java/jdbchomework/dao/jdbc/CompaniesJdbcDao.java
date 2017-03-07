@@ -15,6 +15,6 @@ public class CompaniesJdbcDao extends AbstractDao<Company> implements CompaniesD
 
     protected Company createEntity(ResultSet resultSet) throws SQLException {
         return new Company(resultSet.getString("name"),
-                resultSet.getInt("company_id"));
+                resultSet.getInt("id"));
     }
 }

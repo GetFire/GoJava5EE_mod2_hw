@@ -15,6 +15,6 @@ public class SkillsJdbcDao extends AbstractDao<Skill> implements SkillsDao {
 
     @Override
     protected Skill createEntity(ResultSet resultSet) throws SQLException {
-        return new Skill(resultSet.getInt("skill_id"), resultSet.getString("name"));
+        return new Skill(resultSet.getInt("id"), resultSet.getString("name"));
     }
 }

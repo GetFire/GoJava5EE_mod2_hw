@@ -37,7 +37,7 @@ public class DevelopersJdbcDao extends AbstractDao<Developer> implements Develop
 
     @Override
     protected Developer createEntity(ResultSet resultSet) throws SQLException {
-        return new Developer(resultSet.getLong("developer_id"), resultSet.getString("name"),
+        return new Developer(resultSet.getLong("id"), resultSet.getString("name"),
                 resultSet.getInt("salary"));
     }
 }

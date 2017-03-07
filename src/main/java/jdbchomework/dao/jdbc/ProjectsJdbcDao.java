@@ -61,7 +61,7 @@ public class ProjectsJdbcDao extends AbstractDao<Project> implements ProjectsDao
 
     @Override
     protected Project createEntity(ResultSet resultSet) throws SQLException {
-        return new Project(resultSet.getInt("project_id"), resultSet.getString("name"),
+        return new Project(resultSet.getInt("id"), resultSet.getString("name"),
                 resultSet.getInt("cost"));
     }
 }

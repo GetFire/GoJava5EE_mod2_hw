@@ -15,7 +15,7 @@ public class CustomersJdbcDao extends AbstractDao<Customer> implements Customers
 
     @Override
     protected Customer createEntity(ResultSet resultSet) throws SQLException {
-        return new Customer(resultSet.getInt("customer_id"),
+        return new Customer(resultSet.getInt("id"),
                 resultSet.getString("name"));
     }
 }
