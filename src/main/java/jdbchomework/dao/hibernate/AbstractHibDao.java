@@ -14,12 +14,12 @@ import java.util.List;
 public class AbstractHibDao<T extends AbstractEntity> implements GenericDao<T> {
     protected SessionFactory sessionFactory;
     private String entityName;
-    private Class<T> aClass;
+    private Class<T> clazz;
 
-    public AbstractHibDao(String entityName, SessionFactory sessionFactory, Class<T> aClass) {
+    public AbstractHibDao(String entityName, SessionFactory sessionFactory, Class<T> clazz) {
         this.entityName = entityName;
         this.sessionFactory = sessionFactory;
-        this.aClass = aClass;
+        this.clazz = clazz;
 
     }
 
@@ -66,7 +66,7 @@ public class AbstractHibDao<T extends AbstractEntity> implements GenericDao<T> {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            result = session.get(aClass, id);
+            result = session.get(clazz, id);
             transaction.commit();
         } catch (HibernateException e) {
             if (transaction != null) {

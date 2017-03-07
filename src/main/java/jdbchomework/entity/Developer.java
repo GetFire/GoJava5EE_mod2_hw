@@ -52,13 +52,19 @@ public class Developer extends AbstractEntity {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
 
-        Developer developer = (Developer) o;
+        Developer developer = (Developer) obj;
 
-        if (salary != developer.salary) return false;
+        if (salary != developer.salary) {
+            return false;
+        }
         return skills != null ? skills.equals(developer.skills) : developer.skills == null;
     }
 

@@ -5,7 +5,7 @@ import jdbchomework.entity.Customer;
 import org.hibernate.SessionFactory;
 
 public class CustomersHibDao extends AbstractHibDao<Customer> implements CustomersDao {
-    public CustomersHibDao(String entityName, SessionFactory sessionFactory, Class<Customer> aClass) {
-        super(entityName, sessionFactory, aClass);
+    public CustomersHibDao(String entityName, SessionFactory sessionFactory, Class<Customer> clazz) {
+        super(entityName, sessionFactory, clazz);
     }
 }

@@ -16,8 +16,8 @@ import java.util.List;
 
 public class CompaniesHibDao extends AbstractHibDao<Company> implements CompaniesDao {
 
-    public CompaniesHibDao(String entityName, SessionFactory sessionFactory, Class<Company> aClass) {
-        super(entityName, sessionFactory, aClass);
+    public CompaniesHibDao(String entityName, SessionFactory sessionFactory, Class<Company> clazz) {
+        super(entityName, sessionFactory, clazz);
     }
 
 //    public List<Developer> getDeveloper(long id) {

@@ -33,7 +33,6 @@
 
         <mapping package="jdbchomework.entity"/>
         <mapping class="jdbchomework.entity.AbstractEntity"/>
-        <mapping class="jdbchomework.entity.Test"/>
         <mapping class="jdbchomework.entity.Company"/>
         <mapping class="jdbchomework.entity.Customer"/>
         <mapping class="jdbchomework.entity.Developer"/>

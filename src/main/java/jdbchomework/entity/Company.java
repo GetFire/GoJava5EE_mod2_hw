@@ -1,6 +1,12 @@
 package jdbchomework.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import java.util.List;
 
 @Entity
@@ -13,8 +19,7 @@ public class Company extends AbstractEntity {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "projects",
             joinColumns = {@JoinColumn(name = "company_id")},
-            inverseJoinColumns = {@JoinColumn(name = "id")}
-    )
+            inverseJoinColumns = {@JoinColumn(name = "id")})
     private List<Developer> developers;
 
     public Company() {
